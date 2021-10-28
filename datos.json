@@ -1,0 +1,6 @@
+[
+    {"nombre": "Facundo", "funcion":"Gerente", "telefono": "099881582"},
+    {"nombre": "Jose", "funcion":"Marketing", "telefono": "099881462"},
+    {"nombre": "Ramiro", "funcion":"Administrador", "telefono": "099846582"},
+    {"nombre": "Alejandro", "funcion":"Ayudante", "telefono": "099845672"}
+]
