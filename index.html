@@ -30,10 +30,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#services">Entrenamientos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#entrenamiento">Entrenamientos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Nuestro equipo</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#carrito">Carrito</a></li>
                 </ul>
             </div>
         </div>
@@ -43,11 +44,11 @@
         <div class="container">
             <div class="masthead-subheading">Centro de alto rendimiento</div>
             <div class="masthead-heading text-uppercase">CITY FITNESS</div>
-            <a class="btn btn-primary btn-xl text-uppercase" href="#services">Agendate</a>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#entrenamiento">Agendate</a>
         </div>
     </header>
     <!-- Agenda-->
-    <section class="page-section" id="services">
+    <section class="page-section" id="entrenamiento">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Entrenamientos Personales</h2>
@@ -93,7 +94,7 @@
     <div class="tituloAgendado">
         <h2>Dias Agendados: </h2>
     </div>
-        <div id="horaAgendada"></div>
+    <div id="horaAgendada"></div>
 
     <div class="modal" id="myModal">
         <div class="modal-dialog">
@@ -113,34 +114,10 @@
                             <button type="button" id="botonDeportes" class="btn btn-primary">Selecccionar
                                 deporte</button>
                             <div id="listaDeportes">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">
-                                        <div id="deporteFutbol"></div>
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">
-                                        <div id="deporteBasket"></div>
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio3" value="option3">
-                                    <label class="form-check-label" for="inlineRadio3">
-                                        <div id="deporteVolley"></div>
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio4" value="option4">
-                                    <label class="form-check-label" for="inlineRadio4">
-                                        <div id="deporteLibre"></div>
-                                    </label>
-                                </div>
+                                <div id="deporteFutbol"></div>
+                                <div id="deporteBasket"></div>
+                                <div id="deporteVolley"></div>
+                                <div id="deporteLibre"></div>
                             </div>
                         </div>
                         <div class="mb-4">
@@ -170,8 +147,8 @@
     </div>
 
     <!-- Venta de Productos-->
-    <section class="page-section bg-light" id="portfolio">
-        <div class="container">
+    <section class="page-section bg-light" id="productos">
+        <div class="container" id="lista-productos">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Productos</h2>
                 <h3 class="section-subheading text-muted">Consegui productos de calidad para mejorar el rendimiento
@@ -179,101 +156,113 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 1-->
+                    <!-- Producto 1-->
                     <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="./assets/img/portfolio/reloj.jpg" alt="reloj inteligente" />
-                        </a>
+                        <img class="img-fluid" src="./assets/img/portfolio/reloj.jpg" alt="reloj inteligente" />
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Reloj inteligente</div>
-                            <div class="portfolio-caption-subheading text-muted">Obten el control de tu rendimiento
+                            <div class="portfolio-caption-heading">
+                                <h6>Reloj inteligente</h6>
                             </div>
+                            <div class="portfolio-caption-subheading text-muted">Smart Watch Xiaomi</div>
+                            <div class="card-title text-muted pricing-card-title precio">Precio: <span
+                                    class="text-muted">$UY 1500</span></div>
+                            <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Comprar</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 2-->
+                    <!-- Producto 2-->
                     <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/championes.jpg" alt="calzado deportivo" />
-                        </a>
+                        <img class="img-fluid" src="assets/img/portfolio/pelota.jpg" alt="Pelota Pilates" />
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Calzado deportivo</div>
-                            <div class="portfolio-caption-subheading text-muted">Selecciona el indicado a tus
-                                necesidades</div>
+                            <div class="portfolio-caption-heading">
+                                <h6>Pelota Pilates</h6>
+                            </div>
+                            <div class="portfolio-caption-subheading text-muted">Pelota pilates tamaño grande</div>
+                            <div class="card-title text-muted pricing-card-title precio">Precio: <span
+                                    class="text-muted">$UY 600</span></div>
+                            <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
+                    <!-- Producto 3-->
                     <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/botella.jpg" alt="botella" />
-                        </a>
+                        <img class="img-fluid" src="assets/img/portfolio/botella.jpg" alt="botella" />
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Botellas</div>
-                            <div class="portfolio-caption-subheading text-muted">Manten el agua siempre fresca</div>
+                            <div class="portfolio-caption-heading">
+                                <h6>Botellas</h6>
+                            </div>
+                            <div class="portfolio-caption-subheading text-muted">Botella termica frio/calor 600ml</div>
+                            <div class="card-title text-muted pricing-card-title precio">Precio: <span
+                                    class="text-muted">$UY 300</span></div>
+                            <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="3">Comprar</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                    <!-- Portfolio item 4-->
+                    <!-- Producto 4-->
                     <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/pesas.jpg" alt="pesas" />
-                        </a>
+                        <img class="img-fluid" src="assets/img/portfolio/pesas.jpg" alt="pesas" />
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Pesas</div>
-                            <div class="portfolio-caption-subheading text-muted">Indicadas para llevarlas a todos lados
+                            <div class="portfolio-caption-heading">
+                                <h6>Pesas</h6>
                             </div>
+                            <div class="portfolio-caption-subheading text-muted">Pesas de 4kg</div>
+                            <div class="card-title text-muted pricing-card-title precio">Precio: <span
+                                    class="text-muted">$UY 500</span></div>
+                            <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="4">Comprar</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                    <!-- Portfolio item 5-->
+                    <!-- Producto 5-->
                     <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/gatorade.jpg" alt="gatorade" />
-                        </a>
+                        <img class="img-fluid" src="assets/img/portfolio/gatorade.jpg" alt="gatorade" />
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Bebida Gatorade</div>
-                            <div class="portfolio-caption-subheading text-muted">Consigue la mejor bebida deportiva al
-                                mejor precio</div>
+                            <div class="portfolio-caption-heading">
+                                <h6>Bebida Gatorade </h6>
+                            </div>
+                            <div class="portfolio-caption-subheading text-muted">Bebida Gatorade sabor naranja 600ml
+                            </div>
+                            <div class="card-title text-muted pricing-card-title precio">Precio: <span
+                                    class="text-muted">$UY 80</span></div>
+                            <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="5">Comprar</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <!-- Portfolio item 6-->
+                    <!-- Producto 6-->
                     <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/termica.jpg" alt="termica" />
-                        </a>
+                        <img class="img-fluid" src="assets/img/portfolio/mochila.jpg" alt="mochila" />
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Ropa deportiva</div>
-                            <div class="portfolio-caption-subheading text-muted">La ropa mas liviana y adecuada a cada
-                                deporte</div>
+                            <div class="portfolio-caption-heading">
+                                <h6>Mochila deportiva</h6>
+                            </div>
+                            <div class="portfolio-caption-subheading text-muted">Mochila especial para deportistas</div>
+                            <div class="card-title text-muted pricing-card-title precio">Precio: <span
+                                    class="text-muted">$UY 1200</span></div>
+                            <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="6">Comprar</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="carrito">
+            <table id="lista-carrito" class="table">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+            <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar Compra</a>
+            <div id="compraRealizada"><span style="display: none;">Su compra fue realizada con exito</span></div>
         </div>
     </section>
     <!-- Team-->
@@ -333,14 +322,12 @@
             </div>
         </div>
         <div class="btnEquipo">
-        <button type="button" class="btn btn-primary" id="btnAjax">Conocer el equipo completo..</button>
+            <button type="button" class="btn btn-primary" id="btnAjax">Conocer el equipo completo..</button>
         </div>
         <div class="datosAjax">
-        <div id="equipoCompleto"></div>
+            <div id="equipoCompleto"></div>
         </div>
     </section>
-
-
     <!-- Contact-->
     <section class="page-section" id="contact">
         <div class="container">
@@ -442,5 +429,7 @@
     <script src="js/scripts.js"></script>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <script src="./js/agenda.js"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="./js/pedido.js"></script>
 
 </html>

@@ -67,7 +67,6 @@ $('#noIngresoDias').append('<p style="color:red">Ingrese un día por favor</p>')
 
 function validarForm(evento) {
     evento.preventDefault();
-    const nombre = document.getElementById("nombre");
     const dias = document.getElementById("dias");
     $('#noIngresoDias').hide();
 
@@ -79,19 +78,8 @@ function validarForm(evento) {
         eventoValidado = true;
         $('#noIngresoDias').hide();
         $("#myModal").modal("hide");
-        $('#horaAgendada').append(`<b>` + $('#nombre').val() + ` su horario ha sido agendado para el dia ` + $('#dias option:selected').text() + `.</b>`);
+        $('#horaAgendada').append(`<b>` + $('#nombre').val() + ` su entrenamiento ha sido agendado para el dia ` + $('#dias option:selected').text() + `.</b>`);
         borrarDatosIngresados();
-    }
-    // JSON
-    const agenda1 = {
-        cliente: nombre.value,
-    };
-    const enJSON = JSON.stringify(agenda1);
-    if (eventoValidado == true) {
-        console.log(enJSON);
-        localStorage.setItem("agenda1", enJSON);
-    } else {
-        console.log("Ingreso algun dato erroneo o no habia horario.");
     }
 }
 // Reseter datos del Modal
@@ -160,3 +148,4 @@ $.getJSON(datosJSON, function (respuesta, estado) {
     }
     });
 });
+
